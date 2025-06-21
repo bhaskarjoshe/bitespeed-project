@@ -1,6 +1,10 @@
 # Bitespeed Contact Identification API
 
 A Node.js/TypeScript REST API for identifying and consolidating contact information based on email and phone number inputs. This API implements a sophisticated contact deduplication system that links related contacts and maintains a hierarchical relationship between primary and secondary contacts.
+## 🌐 Live Demo
+
+**Hosted Endpoint**: [https://bitespeed-project-4nfa.onrender.com/api/identify](https://bitespeed-project-4nfa.onrender.com/api/identify)
+
 
 ## 🚀 Features
 
@@ -120,7 +124,7 @@ CREATE TABLE Contact (
    ```bash
    # Development mode
    npm run dev
-   
+
    # Production build
    npm run build
    npm start
@@ -147,10 +151,6 @@ The server will start on port 5000.
 - `npm run build`: Build TypeScript to JavaScript
 - `npm start`: Start production server
 
-## 🌐 Live Demo
-
-**Hosted Endpoint**: [https://bitespeed-contact-api.onrender.com/api/identify](https://bitespeed-contact-api.onrender.com/api/identify)
-
 You can test the live API using the same request format as shown in the testing section above.
 
 ## 🔍 How It Works
@@ -159,7 +159,7 @@ You can test the live API using the same request format as shown in the testing 
 
 1. **Input Validation**: Ensures either email or phone number is provided
 2. **Contact Search**: Searches for existing contacts by email and/or phone number
-3. **Hierarchy Resolution**: 
+3. **Hierarchy Resolution**:
    - If no contacts found: Creates a new primary contact
    - If contacts found: Identifies the primary contact (oldest by creation date)
    - Normalizes hierarchy by converting other primary contacts to secondary
