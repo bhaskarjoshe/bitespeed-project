@@ -1,10 +1,10 @@
 import express from 'express'
-import indexRoutes from './routes/index'
+import contactRoutes from './routes/contact.route.js'
 
 const app = express()
-
 app.use(express.json())
-app.use('/', indexRoutes)
+
+app.use('/api', contactRoutes)
 
 
 export default app
